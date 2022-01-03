@@ -16,7 +16,7 @@ import com.example.affirmations.model.Affirmation
 class ItemAdapter(
     private val context: Context,
     private val dataset: List<Affirmation>
-    ) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
+) : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>() {
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -42,7 +42,7 @@ class ItemAdapter(
      */
     override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         val item = dataset[position]
-        holder.textView.text  = context.resources.getString(item.stringResourceId)
+        holder.textView.text = context.resources.getString(item.stringResourceId)
         holder.imageView.setImageResource(item.imageResourceId)
     }
 
